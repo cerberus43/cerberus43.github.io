@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gitlab使用webhook结合Jenkins完成自动构建 - 左舷的风</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="cerberus43" /><meta name="description" content="配置Jenkins: 首先安装插件：Gitlab Hook Plugin，Gitlab Plugin 安装好插件之后，在项目的构建触发器那块可以看见： 记住那个URL，" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.2 with theme even" />
+
+
+<link rel="canonical" href="https://cerberus43.github.io/post/0724_gitlab_webhook/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Gitlab使用webhook结合Jenkins完成自动构建" />
+<meta property="og:description" content="配置Jenkins: 首先安装插件：Gitlab Hook Plugin，Gitlab Plugin 安装好插件之后，在项目的构建触发器那块可以看见： 记住那个URL，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cerberus43.github.io/post/0724_gitlab_webhook/" />
+<meta property="article:published_time" content="2020-07-24T15:31:14+08:00" />
+<meta property="article:modified_time" content="2020-07-24T15:31:14+08:00" />
+<meta itemprop="name" content="Gitlab使用webhook结合Jenkins完成自动构建">
+<meta itemprop="description" content="配置Jenkins: 首先安装插件：Gitlab Hook Plugin，Gitlab Plugin 安装好插件之后，在项目的构建触发器那块可以看见： 记住那个URL，">
+<meta itemprop="datePublished" content="2020-07-24T15:31:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-24T15:31:14&#43;08:00" />
+<meta itemprop="wordCount" content="393">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gitlab使用webhook结合Jenkins完成自动构建"/>
+<meta name="twitter:description" content="配置Jenkins: 首先安装插件：Gitlab Hook Plugin，Gitlab Plugin 安装好插件之后，在项目的构建触发器那块可以看见： 记住那个URL，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Gitlab使用webhook结合Jenkins完成自动构建</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-24 </span>
+        
+          <span class="more-meta"> 约 393 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h5 id="配置jenkins">配置Jenkins:</h5>
+<ol>
+<li>
+<p>首先安装插件：<code>Gitlab Hook Plugin</code>，<code>Gitlab Plugin</code></p>
+</li>
+<li>
+<p>安装好插件之后，在项目的构建触发器那块可以看见：</p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-023636.png" alt=""></p>
+<p><strong>记住那个URL，之后在Gitlab上配置要用到。</strong></p>
+<p><strong>记住那个URL，之后在Gitlab上配置要用到。</strong></p>
+<p><strong>记住那个URL，之后在Gitlab上配置要用到。</strong></p>
+<p>下面可以选择<code>Gitlab</code>哪种动作触发构建，如<code>push</code>，合并分支等。</p>
+</li>
+</ol>
+<h5 id="配置gitlab">配置GitLab</h5>
+<ol>
+<li>
+<p>首先要在<code>Gitlab</code> 上开启 <code>webhook</code>。<strong>(需要使用admin账号)</strong></p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-025535.png" alt=""></p>
+</li>
+<li>
+<p>在需要自动配置的项目上配置：</p>
+<p><code>Settings</code>&mdash;&gt;<code>Integrations</code>&mdash;&gt;<code>URL</code></p>
+<p><strong>在URL里填上之前jenkins中得出的URL</strong></p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-030038.png" alt=""></p>
+</li>
+<li>
+<p>点击测试：</p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-030402.png" alt=""></p>
+<p>会有403报错，这是因为<code>jenkins</code>没有开启接收外部请求的功能。</p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-030436.png" alt=""></p>
+<p><strong>在jenkins上配置开启外部请求：</strong></p>
+<p><strong>系统管理 &mdash;&gt; 系统配置 &mdash;&gt; 往下拉找到Gitlab那块把勾选的去掉</strong></p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-031344.png" alt=""></p>
+<p>应用保存之后，再在<code>Gitlab</code>上点击<code>test</code>。</p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-032451.png" alt=""></p>
+<p>之后在<code>Gitlab</code>上<code>push</code>一个版本，再看<code>jenkins</code>就能看到自动构建的了</p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-07-23-092525.png" alt=""></p>
+</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">cerberus43</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-07-24
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/0724-dockerfile/">
+            <span class="next-text nav-default">Dockerfile详解及最佳实践</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="cerberus43@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/cerberus43" class="iconfont icon-github" title="github"></a>
+  <a href="https://cerberus43.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cerberus43</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
