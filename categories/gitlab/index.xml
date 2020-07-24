@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gitlab on 左舷的风</title>
+    <link>https://cerberus43.github.io/categories/gitlab/</link>
+    <description>Recent content in gitlab on 左舷的风</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Jul 2020 15:31:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://cerberus43.github.io/categories/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gitlab使用webhook结合Jenkins完成自动构建</title>
+      <link>https://cerberus43.github.io/post/0724_gitlab_webhook/</link>
+      <pubDate>Fri, 24 Jul 2020 15:31:14 +0800</pubDate>
+      
+      <guid>https://cerberus43.github.io/post/0724_gitlab_webhook/</guid>
+      <description>配置Jenkins: 首先安装插件：Gitlab Hook Plugin，Gitlab Plugin 安装好插件之后，在项目的构建触发器那块可以看见： 记住那个URL，</description>
+    </item>
+    
+  </channel>
+</rss>
