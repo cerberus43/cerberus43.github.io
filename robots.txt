@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://cerberus43.github.io/sitemap.xml
