@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>0727_hugo_blog - 左舷的风</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="cerberus43" /><meta name="description" content="Hugo是静态网站生成器，使用go语言编写，与同类产品Hexo相比，具有简单、易用，高效，易扩展、快速部署等特点。Hugo官网在此 GitHub Page" /><meta name="keywords" content="DevOps, kubernetes, IT" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.2 with theme even" />
+
+
+<link rel="canonical" href="https://cerberus43.github.io/post/0727_hugo_blog/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.2801f43c73d5adbc2f555eaf0673ae18ab8c0d11abe18b461f6a85538dc4141c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="0727_hugo_blog" />
+<meta property="og:description" content="Hugo是静态网站生成器，使用go语言编写，与同类产品Hexo相比，具有简单、易用，高效，易扩展、快速部署等特点。Hugo官网在此 GitHub Page" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cerberus43.github.io/post/0727_hugo_blog/" />
+<meta property="article:published_time" content="2020-07-27T11:07:12+08:00" />
+<meta property="article:modified_time" content="2020-07-27T11:07:12+08:00" />
+<meta itemprop="name" content="0727_hugo_blog">
+<meta itemprop="description" content="Hugo是静态网站生成器，使用go语言编写，与同类产品Hexo相比，具有简单、易用，高效，易扩展、快速部署等特点。Hugo官网在此 GitHub Page">
+<meta itemprop="datePublished" content="2020-07-27T11:07:12&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-27T11:07:12&#43;08:00" />
+<meta itemprop="wordCount" content="1361">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="0727_hugo_blog"/>
+<meta name="twitter:description" content="Hugo是静态网站生成器，使用go语言编写，与同类产品Hexo相比，具有简单、易用，高效，易扩展、快速部署等特点。Hugo官网在此 GitHub Page"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">左舷的风de小站</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">左舷的风de小站</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">0727_hugo_blog</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-27 </span>
+        
+          <span class="more-meta"> 约 1361 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <blockquote>
+<p>Hugo是静态网站生成器，使用go语言编写，与同类产品Hexo相比，具有简单、易用，高效，易扩展、快速部署等特点。<a href="https://gohugo.io/" title="">Hugo官网在此</a></p>
+<p>GitHub Pages简单来说是GitHub免费给开发者提供的一款托管个人网站的产品。<a href="https://pages.github.com/" title="">GitHub Pages官网在此</a></p>
+<p>使用Hugo结合GitHub Pages可快速<strong>免费</strong>建立个人博客。</p>
+</blockquote>
+<h4 id="1-系统版本">1. 系统版本：</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">macOS Catalina	10.15.2
+Hugo version:	v0.62.2
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="2-安装hugo">2. 安装Hugo：</h4>
+<p>Hugo官方安装文档在此：https://gohugo.io/getting-started/installing/</p>
+<p>Mac可以直接使用brew安装（其他系统请移步上面的官方安装文档）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">brew install hugo
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Hugo需要依赖git，请提前安装好</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">hugo version	<span class="c1">#查看Hugo版本</span>
+<span class="c1">#####</span>
+Hugo Static Site Generator v0.62.2/extended darwin/amd64 BuildDate: unknown
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="3-使用hugo创建博客">3. 使用Hugo创建博客：</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">hugo new site blog	<span class="c1">#blog目录就是创建的博客目录</span>
+
+tree blog/
+<span class="c1">#####</span>
+blog/
+<span class="p">|</span>-- archetypes
+<span class="p">|</span>   -- default.md
+<span class="p">|</span>-- config.toml			<span class="c1">#博客的配置文件</span>
+<span class="p">|</span>-- content					<span class="c1">#博客文章存放目录（markdown文件）</span>
+<span class="p">|</span>-- data					
+<span class="p">|</span>-- layouts
+<span class="p">|</span>-- static					<span class="c1">#静态文件/图片/CSS/JS文件</span>
+<span class="p">|</span>-- themes					<span class="c1">#博客主题模板存放目录</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="4-配置博客主题">4. 配置博客主题：</h4>
+<p>官方主题模板地址：https://themes.gohugo.io/</p>
+<p>这次使用<strong>Maupassant</strong>这个主题模板：https://github.com/flysnow-org/maupassant-hugo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> blog
+
+git clone https://github.com/flysnow-org/maupassant-hugo themes/maupassant
+
+cp themes/maupassant/exampleSite/config.toml .	<span class="c1">#使用模板自带的配置文件替换默认配置文件</span>
+
+mkdir content/post	<span class="c1">#创建博客文章md文件存放路径（只有此主题模板需要放在post目录下）</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>修改config.toml文件**（先只修改前几行，具体细节修改可看主题模板的网址按需修改）**：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">vim config.toml
+<span class="c1">######</span>
+<span class="nv">baseURL</span> <span class="o">=</span> <span class="s2">&#34;your_github_name.github.io&#34;</span>	<span class="c1">#修改为博客的网址，此处使用github pages地址，后面具体介绍</span>
+<span class="nv">languageCode</span> <span class="o">=</span> <span class="s2">&#34;zh-CN&#34;</span>
+<span class="nv">title</span> <span class="o">=</span> <span class="s2">&#34;左舷的风的博客&#34;</span>						 <span class="c1">#博客的名字</span>
+<span class="nv">theme</span> <span class="o">=</span> <span class="s2">&#34;maupassant&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>写一篇博客文章测试下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">hugo new post/my-first-blog.md
+ 
+vim content/post/my-first-blog.md 
+<span class="c1">#####</span>
+---
+title: <span class="s2">&#34;My First Blog&#34;</span>
+date: 2020-01-16T10:37:32+08:00
+draft: <span class="nb">false</span>			<span class="c1">#此处要改为false，否则在首页不会显示！</span>
+---
+<span class="c1">#### Hello World!</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>draft: false       #此处要改为false，否则在首页不会显示！</strong></p>
+<p>启动hugo登陆看下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">hugo server -D
+</code></pre></td></tr></table>
+</div>
+</div><p>打开浏览器，访问 http://localhost:1313/ 即可：</p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-01-16-071210.png" alt="hugo_01"></p>
+<h4 id="5-配置github">5. 配置GitHub：</h4>
+<p>在GitHub上创建一个新的repository：</p>
+<p><img src="http://cerberus43-md.oss-cn-beijing.aliyuncs.com/md/2020-01-16-071350.png" alt="hugo_02"></p>
+<p><strong>Repository name要求必须为 你的github名字+github.io (譬如我的名字是cerberus43,就创建为cerberus43.github.io)</strong></p>
+<p><strong>Repository name要求必须为 你的github名字+github.io</strong></p>
+<p><strong>Repository name要求必须为 你的github名字+github.io</strong></p>
+<p>上传你的博客到github这个仓库（<strong>请提前与github做好ssh关联，不会的请打开搜索引擎输入关键词”github ssh“搜索真相</strong>）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">hugo  --theme<span class="o">=</span>maupassant --baseUrl<span class="o">=</span><span class="s2">&#34;https://your_github_name.github.io&#34;</span>	<span class="c1">#theme为主题模板名称，url为上一步创建的github仓库名称</span>
+
+<span class="c1">#执行后会新增一个public目录，此目录就是静态文件，上传此文件夹里的文件即可</span>
+<span class="nb">cd</span> public
+
+git init
+git add .
+git commit -m <span class="s1">&#39;first commit&#39;</span>
+git remote add origin git@github.com:cerberus43/cerberus43.github.io.git
+git push -u  origin master 
+</code></pre></td></tr></table>
+</div>
+</div><p>之后，登陆https://your_github_name.github.io看看吧！</p>
+<h4 id="6后记">6.后记：</h4>
+<ul>
+<li>关于<strong>博客网站的页面配置</strong>，可参考此主题模板地址：https://github.com/flysnow-org/maupassant-hugo；</li>
+<li>关于<strong>markdown里的图片</strong>，可参考ipic+阿里云oss实现；（已实现，改天写个文章分享）</li>
+</ul>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/0724_gitlab_webhook/">
+            <span class="next-text nav-default">Gitlab使用webhook结合Jenkins完成自动构建</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="cerberus43@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/cerberus43" class="iconfont icon-github" title="github"></a>
+  <a href="https://cerberus43.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cerberus43</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-156449714-2', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
