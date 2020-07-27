@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>harbor on 左舷的风</title>
+    <link>https://cerberus43.github.io/tags/harbor/</link>
+    <description>Recent content in harbor on 左舷的风</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Jul 2020 14:40:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://cerberus43.github.io/tags/harbor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>私有镜像仓库harbor搭建</title>
+      <link>https://cerberus43.github.io/post/0727_install_harbor/</link>
+      <pubDate>Mon, 27 Jul 2020 14:40:55 +0800</pubDate>
+      
+      <guid>https://cerberus43.github.io/post/0727_install_harbor/</guid>
+      <description>Docker离不开可靠的镜像管理，官方默认的DockHub，虽然Docker官方也提供了公共的镜像仓库Registry，但是功能略显简单。 H</description>
+    </item>
+    
+  </channel>
+</rss>

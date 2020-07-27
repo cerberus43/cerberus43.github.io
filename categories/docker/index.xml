@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on 左舷的风</title>
+    <link>https://cerberus43.github.io/categories/docker/</link>
+    <description>Recent content in docker on 左舷的风</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Jul 2020 11:07:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://cerberus43.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dockerfile详解及最佳实践</title>
+      <link>https://cerberus43.github.io/post/0724-dockerfile/</link>
+      <pubDate>Fri, 24 Jul 2020 11:07:12 +0800</pubDate>
+      
+      <guid>https://cerberus43.github.io/post/0724-dockerfile/</guid>
+      <description>1. Dockerfile 命令详解: FROM 指定基础镜像（必选） 所谓定制镜像，那一定是以一个镜像为基础，在其上进行定制。就像我们之前运行了一个 nginx 镜像的容器，再进行修改一</description>
+    </item>
+    
+  </channel>
+</rss>

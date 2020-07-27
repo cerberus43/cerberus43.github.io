@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on 左舷的风</title>
+    <link>https://cerberus43.github.io/categories/hugo/</link>
+    <description>Recent content in hugo on 左舷的风</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Jul 2020 11:07:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://cerberus43.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Hugo &#43; GitHub Pages搭建个人博客</title>
+      <link>https://cerberus43.github.io/post/0727_hugo_blog/</link>
+      <pubDate>Mon, 27 Jul 2020 11:07:12 +0800</pubDate>
+      
+      <guid>https://cerberus43.github.io/post/0727_hugo_blog/</guid>
+      <description>Hugo是静态网站生成器，使用go语言编写，与同类产品Hexo相比，具有简单、易用，高效，易扩展、快速部署等特点。Hugo官网在此 GitHub Page</description>
+    </item>
+    
+  </channel>
+</rss>
