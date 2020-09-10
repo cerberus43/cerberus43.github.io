@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>hugo new post/0727_install_harbor.md</title>
+      <title>记一次ssh配置导致的python多线程脚本失败的排查过程</title>
       <link>https://cerberus43.github.io/post/0910_python_ssh/</link>
       <pubDate>Thu, 10 Sep 2020 18:34:00 +0800</pubDate>
       
